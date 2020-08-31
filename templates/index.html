@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Sentiment Analysis</title>
+</head>
+
+<body>
+
+    <div style="color:black">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Customer Review Sentiment Analysis</h2>
+            <h3>Enter the review</h3>
+            <input id="first" name="review" type="text" >            
+            <br><br><button id="submit_button" type="submit">Submit</button>
+            <br>
+    	</form>
+        <br><br><h3 id='result_text'>{{ prediction_text }}<h3>
+    </div>
+</body>
+
+<style>
+        body {
+            background-color: None;
+            text-align: center;
+            padding: 0px;
+        }
+        
+        #first {
+            height: 125px;
+			width : 300px;
+            font-size: 20px;
+			text-align : left;
+        }
+		
+		#submit_button {
+			 background-color: Green;
+			 padding: 15px 32px;
+			 font-size: 16px;
+			 margin: 4px 2px;
+			 cursor: pointer; 
+			 color: White;
+		}
+		
+		#result_text {
+			color: Blue;
+		}
+</style>
+</html>
